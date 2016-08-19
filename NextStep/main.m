@@ -274,44 +274,44 @@ int main(int argc, const char * argv[]) {
             NSLog(@"Always executes!");
         }
         
-        NSFileManager *fileManager = [NSFileManager defaultManager];
-        NSArray *dirs = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-        NSLog(@"%@", [dirs description]);
-        NSString *documentsDirectoryPath = [dirs objectAtIndex:0];
-        if([fileManager fileExistsAtPath:[NSString stringWithFormat:@"%@/books.pdf", documentsDirectoryPath]] == YES) {
-            NSLog(@"File books.pdf exist!");
-        }
-        if([fileManager contentsEqualAtPath:[NSString stringWithFormat:@"%@/books.pdf", documentsDirectoryPath] andPath:[NSString stringWithFormat:@"%@/books2.pdf", documentsDirectoryPath]] == YES) {
-            NSLog(@"Files are equal!");
-        }
-        if([fileManager isWritableFileAtPath:[NSString stringWithFormat:@"%@/books.pdf", documentsDirectoryPath]] == YES) {
-            NSLog(@"File is writable!");
-        }
-        if([fileManager isReadableFileAtPath:[NSString stringWithFormat:@"%@/books.pdf", documentsDirectoryPath]] == YES) {
-            NSLog(@"File is readable!");
-        }
-        if([fileManager isExecutableFileAtPath:[NSString stringWithFormat:@"%@/books.pdf", documentsDirectoryPath]] == YES) {
-            NSLog(@"File is executable!");
-        }
-        if([fileManager moveItemAtPath:[NSString stringWithFormat:@"%@/books.pdf", documentsDirectoryPath] toPath:[NSString stringWithFormat:@"%@/books4.pdf", documentsDirectoryPath] error:nil] == YES) {
-            NSLog(@"File moved successfully!");
-        }
-        if([fileManager copyItemAtPath:[NSString stringWithFormat:@"%@/books2.pdf", documentsDirectoryPath] toPath:[NSString stringWithFormat:@"%@/books5.pdf", documentsDirectoryPath] error:nil] == YES) {
-            NSLog(@"File copied successfully!");
-        }
-        if([fileManager removeItemAtPath:[NSString stringWithFormat:@"%@/books4.pdf", documentsDirectoryPath] error:nil] == YES) {
-            NSLog(@"Delete successfully!");
-        }
-        NSData *data = [fileManager contentsAtPath:[NSString stringWithFormat:@"%@/books5.pdf", documentsDirectoryPath]];
-        NSString *content = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-        NSLog(@"%@", content);
-        
-        NSString *userData = @"I really appreciate that! Thank you!";
-        [userData writeToFile:[NSString stringWithFormat:@"%@/books5.pdf", documentsDirectoryPath] atomically:YES encoding:NSUTF8StringEncoding error:nil];
-        data = [fileManager contentsAtPath:[NSString stringWithFormat:@"%@/books5.pdf", documentsDirectoryPath]];
-        content = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-        NSLog(@"%@", content);
-        NSLog(@"path: %@", documentsDirectoryPath);
+//        NSFileManager *fileManager = [NSFileManager defaultManager];
+//        NSArray *dirs = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+//        NSLog(@"%@", [dirs description]);
+//        NSString *documentsDirectoryPath = [dirs objectAtIndex:0];
+//        if([fileManager fileExistsAtPath:[NSString stringWithFormat:@"%@/books.pdf", documentsDirectoryPath]] == YES) {
+//            NSLog(@"File books.pdf exist!");
+//        }
+//        if([fileManager contentsEqualAtPath:[NSString stringWithFormat:@"%@/books.pdf", documentsDirectoryPath] andPath:[NSString stringWithFormat:@"%@/books2.pdf", documentsDirectoryPath]] == YES) {
+//            NSLog(@"Files are equal!");
+//        }
+//        if([fileManager isWritableFileAtPath:[NSString stringWithFormat:@"%@/books.pdf", documentsDirectoryPath]] == YES) {
+//            NSLog(@"File is writable!");
+//        }
+//        if([fileManager isReadableFileAtPath:[NSString stringWithFormat:@"%@/books.pdf", documentsDirectoryPath]] == YES) {
+//            NSLog(@"File is readable!");
+//        }
+//        if([fileManager isExecutableFileAtPath:[NSString stringWithFormat:@"%@/books.pdf", documentsDirectoryPath]] == YES) {
+//            NSLog(@"File is executable!");
+//        }
+//        if([fileManager moveItemAtPath:[NSString stringWithFormat:@"%@/books.pdf", documentsDirectoryPath] toPath:[NSString stringWithFormat:@"%@/books4.pdf", documentsDirectoryPath] error:nil] == YES) {
+//            NSLog(@"File moved successfully!");
+//        }
+//        if([fileManager copyItemAtPath:[NSString stringWithFormat:@"%@/books2.pdf", documentsDirectoryPath] toPath:[NSString stringWithFormat:@"%@/books5.pdf", documentsDirectoryPath] error:nil] == YES) {
+//            NSLog(@"File copied successfully!");
+//        }
+//        if([fileManager removeItemAtPath:[NSString stringWithFormat:@"%@/books4.pdf", documentsDirectoryPath] error:nil] == YES) {
+//            NSLog(@"Delete successfully!");
+//        }
+//        NSData *data = [fileManager contentsAtPath:[NSString stringWithFormat:@"%@/books5.pdf", documentsDirectoryPath]];
+//        NSString *content = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+//        NSLog(@"%@", content);
+//        
+//        NSString *userData = @"I really appreciate that! Thank you!";
+//        [userData writeToFile:[NSString stringWithFormat:@"%@/books5.pdf", documentsDirectoryPath] atomically:YES encoding:NSUTF8StringEncoding error:nil];
+//        data = [fileManager contentsAtPath:[NSString stringWithFormat:@"%@/books5.pdf", documentsDirectoryPath]];
+//        content = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+//        NSLog(@"%@", content);
+//        NSLog(@"path: %@", documentsDirectoryPath);
         
 //        NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
 //        [request setHTTPMethod:@"GET"];
